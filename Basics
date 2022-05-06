@@ -65,11 +65,12 @@ Python 101
      else - these statements allow us to elegantly describe what we want our code to do when certain conditions are not met.
             'else' statements always appear in conjunction with if statements.
             
-        if weekday:
-          print("wake up at 6:30")
-        else:
-          print("sleep in")
-        
+        def same_name(your_name, my_name):
+          if (your_name == my_name):
+            return True
+          else:
+            return False
+            
      elif - 'else if' checks another condition after the previous if statements conditions aren’t met.
               Use to control the order we want our program to check each of our conditional statements.
               
