@@ -1,0 +1,88 @@
+Python 101
+
+## Basic Commands
+
+  print() - displays
+  return() - returns output (useful in functions)
+  type() - what kind of variable 
+
+## Functions
+
+  Built-in Functions: https://docs.python.org/3/library/functions.html 
+
+  def function1(input1, input2):
+    variable = input1 + input2
+    return variable
+    print("your variable is " + str(variable))
+
+## Boolean Variables & if Statements
+
+  * True and False are the only bool types, and any variable that is assigned one of these values is called a boolean variable.
+    set_to_true = True
+    set_to_false = False
+    
+    bool_one = 5 != 7 
+    
+  * Understanding boolean variables and expressions is essential because they are the building blocks of conditional statements. 
+
+    if variable1 == 5:
+      print("True") 
+    
+  * Boolean Operators
+
+    and - combines two boolean expressions and evaluates as True if both its components are True, but False otherwise.
+       
+       if variable1 == 5 and variable2 >=4:
+        print("True") 
+      
+    or - combines two expressions into a larger expression that is True if either component is True.
+    
+        if variable1 == 5 or variable2 >=4:
+         print("True") 
+    
+    not - when applied to any boolean expression it reverses the boolean value. Add 'not' statement at the beginning 
+          So if we have a True statement and apply a not operator we get a False statement.
+          
+        if not variable1 ==5:
+         print("True")
+        if not (variable1 ==5) and not (variable2 >=2):
+         print("False")
+       
+     else - these statements allow us to elegantly describe what we want our code to do when certain conditions are not met.
+            'else' statements always appear in conjunction with if statements.
+            
+        if weekday:
+          print("wake up at 6:30")
+        else:
+          print("sleep in")
+        
+     elif - 'else if' checks another condition after the previous if statements conditions aren’t met.
+              Use to control the order we want our program to check each of our conditional statements.
+              
+         if donation >= 1000:
+           print("You've achieved platinum status")
+         elif donation >= 500:
+           print("You've achieved gold donor status")
+         else:
+           print("You've achieved silver donor status")
+
+      'if' statements can be used to create control flow in your code.
+      'else' statements can be used to execute code when the conditions of an if statement are not met.
+      'elif' statements can be used to build additional checks into your if statements
+
+  * Relational Operators
+    
+    == equals
+    != not equals
+    > greater than
+    >= greater than or equal to
+    < less than
+    <= less than or equal to
+    
+
+ 
+
+
+
+
+
