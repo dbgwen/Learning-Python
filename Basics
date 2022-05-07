@@ -10,25 +10,52 @@ Python 101
           The argument may be a sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set)
   list() - mutable sequence type
   
-  
 ## Functions
 
-  Built-in Functions: https://docs.python.org/3/library/functions.html 
+ Built-in Functions vs User Defined Functions. There are two distinct categories for functions in the world of Python. 
+    
+ 1. Built-in functions - functions that come built into Python for us to use. In Python, your script will execute from the top down, until there 
+                          is nothing left to run.
+    
+      Built-in Functions: https://docs.python.org/3/library/functions.html 
 
-  def function1(input1, input2):
-    variable = input1 + input2
-    return variable
-    print("your variable is " + str(variable))
+   
+  2. Defined Functions - functions that are written by users (like us!).
+  
+      It is your job to include gateways, known as conditional statements, to tell the computer when it should execute 
+      certain blocks of code. If these conditions are met, then run this function.
+  
+        def function1(input1, input2):
+          variable = input1 + input2
+          return variable
+          print("your variable is " + str(variable))
+
+  Types of Arguments - there are 3 different types of arguments we can give a function: 
+      
+      1. Positional arguments: arguments that can be called by their position in the function definition.
+      
+          def calculate_taxi_price(miles_to_travel, rate, discount):
+            print(miles_to_travel * rate - discount )
+
+      2. Keyword arguments: arguments that can be called by their name.
+      
+          calculate_taxi_price(rate=0.5, discount=10, miles_to_travel=100)
+
+      3. Default arguments: arguments that are given default values.
+            
+           def calculate_taxi_price(miles_to_travel, rate, discount = 10):
+             print(miles_to_travel * rate - discount )
+
 
 ## Boolean Variables & if Statements
 
-  * True and False are the only bool types, and any variable that is assigned one of these values is called a boolean variable.
+ * True and False are the only bool types, and any variable that is assigned one of these values is called a boolean variable.
     set_to_true = True
     set_to_false = False
     
     bool_one = 5 != 7 
     
-  * Relational Operators
+ * Relational Operators
     
     == equals
     != not equals
@@ -37,10 +64,10 @@ Python 101
     < less than
     <= less than or equal to
     
-  * Understanding boolean variables and expressions is essential because they are the building blocks of conditional statements. 
+      Understanding boolean variables and expressions is essential because they are the building blocks of conditional statements. 
 
-    if variable1 == 5:
-      print("True") 
+      if variable1 == 5:
+        print("True") 
     
   * Boolean Operators
 
@@ -62,7 +89,7 @@ Python 101
         if not (variable1 ==5) and not (variable2 >=2):
          print("False")
        
-     else - these statements allow us to elegantly describe what we want our code to do when certain conditions are not met.
+  * else - these statements allow us to elegantly describe what we want our code to do when certain conditions are not met.
             'else' statements always appear in conjunction with if statements.
             
         def same_name(your_name, my_name):
@@ -71,7 +98,7 @@ Python 101
           else:
             return False
             
-     elif - 'else if' checks another condition after the previous if statements conditions aren’t met.
+  * elif - 'else if' checks another condition after the previous if statements conditions aren’t met.
               Use to control the order we want our program to check each of our conditional statements.
               
          if donation >= 1000:
@@ -112,8 +139,48 @@ Python 101
           
           for i in range(5):
             print(i)
-      
 
+## Lists 
+
+    In Python, for any specific data-type ( strings, booleans, lists, etc. ) there is built-in functionality 
+    that we can use to create, manipulate, and even delete our data. We call this built-in functionality a method. 
+    For lists, methods will follow the form of list_name.method()
+
+          example_list.append() - adds item or list to list
+            heights.append(["Vik", 68])
+          example_list.remove() - removes item from list
+          example_list[index number] = "New Item" - replaces that index on the list with the New Item
+
+    Two-Dimensional (2D) Lists
+    
+      Items in a list can be numbers or strings. Lists can contain other lists! 
+      We will commonly refer to these as two-dimensional (2D) lists.
+      
+          heights = [["Noelle", 61], ["Ava", 70], ["Sam", 67], ["Mia", 64]]
+          
+      2D lists can be accessed similar to their one-dimensional counterpart. 
+      Instead of providing a single pair of brackets [ ] we will use an additional set for each dimension past the first. 
+          
+          noelles_height = heights[0][1] - creates new variable with the selected index
+          class_name_hobbies[0][1] = "Meditation" - replaces that index with Mediation
+          customer_data[1].remove(False) - removes an item from a list within a list
+   
+   * Zip Function
+       
+       The zip() function takes two (or more) lists as inputs and returns an object that contains a list of pairs. 
+       Each pair contains one element from each of the inputs. 
+       
+       This zip object contains the location of this variable in our computer’s memory. 
+       It is fairly simple to convert this object into a useable list by using the built-in function list():
+  
+                list_variable = zip(list1, list2)
+                converted_list = list(list_variable)
+                print(converted_list)
+          
+        Notice two things: (1) Our data set has been converted from a zip memory object to an actual list (denoted by [ ])
+        (2) The inner lists don’t use square brackets [ ] around the values. This is because they have been converted into tuples (an immutable type of list).
+
+      
     
 
  
