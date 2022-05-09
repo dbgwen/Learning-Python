@@ -73,6 +73,31 @@
 
  
         
-        
-
+  ## Examples
   
+        A function that returns the sum of the first and last elements of a given list might look like this:
+              def first_plus_last(lst):
+              return lst[0] + lst[-1]
+
+        We can get the length and append it at the same time by nesting the function calls as shown in the solution. 
+        Afterward, we return the modified list.
+                def append_size(lst):
+                lst.append(len(lst))
+                return lst
+  
+        Write a function named larger_list that has two parameters named lst1 and lst2. 
+        The function should return the last element of the list that contains more elements. 
+        If both lists are the same size, then return the last element of lst1.
+        
+                def larger_list(lst1, lst2):
+                  if len(lst1) >= len(lst2): (use >= to compare lengths of lists)
+                    return lst1[-1] 
+                  else:
+                    return lst2[-1]
+                    
+        The function should combine these two lists into one new list and sort the result. Return the new sorted list.
+        
+                def combine_sort(lst1, lst2):
+                  unsorted = lst1 + lst2
+                  combine = sorted(unsorted)
+                  return combine
