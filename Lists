@@ -1,0 +1,78 @@
+## Lists in Python
+
+* .insert() allows us to add an element to a specific index in a list
+    
+    The .insert() method takes in two inputs:
+      1. The index you want to insert into.
+      2. The element you want to insert at the specified index.
+      
+      store_line.insert(2, "Vikor")
+      print(store_line) 
+      
+      All elements from the specified index and up to the last index are shifted one index to the right. 
+      This does not apply to inserting an element to the very end of a list as it will simply add an additional index.
+      
+* .pop() allows us to remove elements at a specific index 
+      
+      The .pop() method takes an optional single input:
+        1. The index for the element you want to remove.
+        
+      The method can be called without a specific index. 
+      Using .pop() without an index will remove whatever the last element of the list is.
+      
+      .pop() is unique in that it will return the value that was removed. 
+      If we wanted to know what element was deleted, simply assign a variable to the call of the .pop() method. 
+      
+* range() - creates an object of a list of consecutive numbers, starting at 0 and ending at the number before the input
+
+      Convert range() to a list using list(range())
+      range() has three potential inputs: range(starting number, ending number, skip number)
+      range(2, 12, 3) - outputs a list starting at 2, repeating every three numbers and ending on 11
+       
+* len() - finds the number of items in a list ("length")
+      
+      len() 
+      print(len())
+      
+* Slicing - extracts a portion of a list to make a new list
+
+      list_name[start:end]
+        - start is the index of the first element that we want to include in our selection
+        - end is the index of one more than the last index that we want to include
+        
+       suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+       beginning = suitcase[0:2] - extracts first two elements
+       
+       list_name[:n] - extracts the first n elements of a list
+          fruits[:3] - extracts the list from 0 and up to index 3 (not including 3)
+          
+        list_name[-n:] - extracts the last n elements
+          fruits[-2:] - extracts the last two items on a list
+        
+        list_name[:-n] - extracts all but n last elements of a list
+          fruits[:-1] - extracts from 0 up to last element on list
+          
+ * .count() - count occurrences of an item in a list
+        
+        since .count() returns a value, we can assign it to a variable to use it
+        Can use .count() to count element appearances in a two-dimensional list [num1, num2]
+        
+ * .sort() - sorts a list, modifies it directly
+ 
+        .sort() - sorts list of names in alphabetical order
+        .sort(reverse=True) - sorts in reverse
+        
+        The .sort() method does not return any value and thus does not need to be assigned to a variable since it modifies the list directly. 
+        If we do assign the result of the method, it would assign the value of None to the variable.
+        
+ * sorted() - built-in function that creates new list
+ 
+        sorted() differs from .sort() in two ways:
+          1. It comes before a list in stead of after
+          2. It generates a new list rather than modifying the one that already exists
+
+ 
+        
+        
+
+  
