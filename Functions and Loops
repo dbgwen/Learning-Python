@@ -221,8 +221,15 @@ Python 101
     
     A loop that never terminates is called an infinite loop. 
     These are very dangerous for our code because they will make our program run forever and thus consume all of your computer’s resources. 
-  
-  
+    
+    students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
+    students_period_B = ["Dora", "Minerva", "Alexa", "Obie"]
+
+    for student in students_period_A:
+      students_period_B.append(student)
+      #print(student)
+    for student in students_period_B:
+      print(student)
   
   
   
