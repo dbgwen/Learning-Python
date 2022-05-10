@@ -73,7 +73,7 @@
 
  
         
-## Examples
+    ## List Examples
   
         A function that returns the sum of the first and last elements of a given list might look like this:
               def first_plus_last(lst):
@@ -144,4 +144,14 @@
                         return lst[int(len(lst)/2)]
                         
                         
-                    
+## Tuples 
+ 
+    Data structure in Python that lets us store multiple data types inside one object - it is immutable - can't be changed
+    Interact with tuples like a list, except once it is created we change or modify it - the order of the tuple is very important
+    Sometimes it is useful to have an immutable list
+    
+    - Unpack a tuple by creating variables from the tuple
+    - Creating a one element tuple - have to use a comma after the first element ("trailing comma")
+    
+*
+    
