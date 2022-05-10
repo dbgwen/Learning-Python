@@ -1,4 +1,45 @@
-## Lists in Python
+## Lists 
+
+## List Basics
+
+    In Python, for any specific data-type ( strings, booleans, lists, etc. ) there is built-in functionality 
+    that we can use to create, manipulate, and even delete our data. We call this built-in functionality a method. 
+    For lists, methods will follow the form of list_name.method()
+
+          example_list.append() - adds item or list to list
+            heights.append(["Vik", 68])
+          example_list.remove() - removes item from list
+          example_list[index number] = "New Item" - replaces that index on the list with the New Item
+
+    Two-Dimensional (2D) Lists
+    
+      Items in a list can be numbers or strings. Lists can contain other lists! 
+      We will commonly refer to these as two-dimensional (2D) lists.
+      
+          heights = [["Noelle", 61], ["Ava", 70], ["Sam", 67], ["Mia", 64]]
+          
+      2D lists can be accessed similar to their one-dimensional counterpart. 
+      Instead of providing a single pair of brackets [ ] we will use an additional set for each dimension past the first. 
+          
+          noelles_height = heights[0][1] - creates new variable with the selected index
+          class_name_hobbies[0][1] = "Meditation" - replaces that index with Mediation
+          customer_data[1].remove(False) - removes an item from a list within a list
+   
+   * Zip Function
+       
+       The zip() function takes two (or more) lists as inputs and returns an object that contains a list of pairs. 
+       Each pair contains one element from each of the inputs. 
+       
+       This zip object contains the location of this variable in our computer’s memory. 
+       It is fairly simple to convert this object into a useable list by using the built-in function list():
+  
+                list_variable = zip(list1, list2)
+                converted_list = list(list_variable)
+                print(converted_list)
+          
+        Notice two things: (1) Our data set has been converted from a zip memory object to an actual list (denoted by [ ])
+        (2) The inner lists don’t use square brackets [ ] around the values. This is because they have been converted into tuples (an immutable type of list).
+
 
 * .insert() allows us to add an element to a specific index in a list
     
@@ -153,5 +194,4 @@
     - Unpack a tuple by creating variables from the tuple
     - Creating a one element tuple - have to use a comma after the first element ("trailing comma")
     
-*
-    
+
