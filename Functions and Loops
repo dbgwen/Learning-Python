@@ -257,13 +257,24 @@
 
        - Loops can be nested in Python
     
-          # Loop through each sublist
-          for team in project_teams:
-            # Loop elements in each sublist
-            for student in team:
-              print(student)
+          sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
+          scoops_sold = 0
+
+          for location in sales_data:
+            print(location)
+            for scoops in location:
+              scoops_sold += scoops
        
-       - 
+ * List Comprehensions
+ 
+        new_list = [<expression> for <element> in <collection>]
+        
+      List comprehension:
+        1. Takes an element in the list numbers
+        2. Assigns that element to a variable called num (our <element>)
+        3. Applies the <expression> on the element stored in num and adds the result to a new list called doubled
+        4. Repeats steps 1-3 for every other element in the numbers list (our <collection>)
+
     
     
     
