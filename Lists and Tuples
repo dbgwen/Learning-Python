@@ -114,7 +114,7 @@
 
  
         
-    ## List Examples
+ ## List Examples
   
         A function that returns the sum of the first and last elements of a given list might look like this:
               def first_plus_last(lst):
@@ -194,4 +194,94 @@
     - Unpack a tuple by creating variables from the tuple
     - Creating a one element tuple - have to use a comma after the first element ("trailing comma")
     
+    
+## List Comprehensions
 
+   new list = [<operation> for item in <list>]
+   
+   1. operation performed on each item in list
+   2. list that we are adjusting
+   
+   - Use list comprehension to iterate through a nested list. For example, if we have a list of (x,y) coordinate pairs and we want to perform 
+    a calculation on all of them based on a particular formula, we can use list comprehension to achieve our goal. 
+   - Powerful tool to modify lists with one line of code
+   
+  Operations available:
+   
+   - Double: multiply (*) each number by 2
+        double_nums = [2 * item for item in nums]
+        
+   - Squared: exponential (**) each number
+        squares = [item**2 for item in nums]
+        
+   - Add Ten: (+ 10) is  to each number
+        add_ten = [item + 10 for item in nums]
+        
+   - Divide by Two: divide each number in list (/2)
+        divide_by_two = [item/2 for item in nums]
+        
+   - Parity: use (%) modulo to return remainder after division
+        parity = [item%2 for item in nums]
+        
+   - Concatenate strings: use "strings" (+) item for each item in list
+        greetings = ["Hello, " + item for item in names]
+        
+   - First Character: get character of a string using [index] for each item in list
+        first_character = [item[0] for item in names]
+        
+   - Size: find the number of characters in a string using len()
+        lengths = [len(item) for item in names]
+        
+   - Opposite: use the 'not' operator to flip the value of a Boolean
+        opposite = [not item for item in booleans]
+        
+   - Same String: use string comparison using ==
+        is_Jerry = [item=="Jerry" for item in names]
+        
+   - Greater Than Two: use operators to make comparisons
+        greater_than_two = [item > 2 for item in nums]
+   
+        <: less than
+        <=: less than or equal to
+        >: greater than
+        >=: greater than or equal to
+        ==: equal to
+        !=: not equal to
+
+    - Product: access multiple items in sub-lists by using the following syntax 
+            new_list = [item1 * item2 for (item1, item2) in original_list]
+            
+    - Greater Than: provides 'True' if the first number in the sub-list is greater than the second number in the sub-list
+            greater_than = [item1 > item2 for (item1, item2) in original_list]
+    
+    - First Only: contains only the first element in each sub-list of nested_lists
+            first_only = [item1 for (item1, item2) in original_list]
+            
+    - Add w/ Zip: add two lists using zip and list comprehension
+            combined = zip(a,b)
+            sums = [item1 + item2 for (item1, item2) in combined]
+    
+    - Divide w/ Zip: divide two lists using zip and list comprehension
+            combined = zip(a,b)
+            quotients = [item2/item1 for (item1, item2) in combined]
+            
+    - Using strings and zip
+    
+            capitals = ["Santiago", "Paris", "Copenhagen"]
+            countries = ["Chile", "France", "Denmark"]
+            locations = [capital + ", " + country for (capital, country) in zip(capitals, countries)]
+    
+    - Using strings an integers
+    
+            names = ["Shilah", "Arya", "Kele"]
+            ages = [14, 9, 35]
+            users = ["Name: " + name + ", Age: " + str(age) for (name, age) in zip(names, ages)]
+            
+    - Greater Than w/ Zip
+    
+            
+            
+            
+            
+    
+    
