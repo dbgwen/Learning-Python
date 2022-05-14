@@ -1,3 +1,79 @@
 ## Strings in Python
 
-* 
+    - A string is a sequence of characters contained within a pair of 'single quotes' or "double quotes"
+    - A string can be any length and can contain any letters, numbers, symbols, and spaces
+  
+* Strings can be thought of as lists
+
+    - You can index a single letter from any string
+
+    my_name = "Joey Jo Jo"
+    first_initial = my_name[0]
+    print(first_initial)
+    
+* Slicing Strings
+
+   - If we remove the first index, the slice starts at the beginning of the string  
+      
+      string_variable[:4]
+      
+   - If we remove the second index the slice continues to the end of the string
+       
+       string_variable[4:]
+       
+* Concatenating Strings
+
+   def account_generator(first_name, last_name):
+      new_account = first_name[0:3] + last_name[0:3]
+      return new_account
+
+      new_account = account_generator(first_name, last_name)
+      print(new_account)
+      
+* Using len() to slice
+
+      Using a len() statement as the starting index 
+        and omitting the final index lets you slice n characters from the end of a string, where n is the amount you subtract from len()
+        
+       length = len(favorite_fruit)
+       last_chars = favorite_fruit[length-4:]
+       print(last_chars)
+       
+* Negative Indices
+
+      favorite_fruit[-3:] - slices the last three characters of 'blueberry'
+     
+* Strings are Immutable
+
+    - They cannot be changed once they are created
+    - They can be used to create other things 
+    
+* Escape Characters
+
+    - By adding a backslash in front of the special character we want to escape, \", we can include it in a string
+    
+* Iterating Through Strings
+
+    - Can iterate through strings using 'for' and 'while' loops
+    
+      def print_each_letter(word):
+        for letter in word:
+          print(letter)
+    
+* Strings and Conditionals
+
+    favorite_fruit = "blueberry"
+    counter = 0
+    for character in favorite_fruit:
+      if character == "b":
+        counter = counter + 1
+    print(counter)
+    
+    
+
+
+
+
+   
+  
+ 
