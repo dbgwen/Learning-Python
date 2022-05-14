@@ -2,6 +2,9 @@
 
     - A string is a sequence of characters contained within a pair of 'single quotes' or "double quotes"
     - A string can be any length and can contain any letters, numbers, symbols, and spaces
+    - A character from a string can be selected using string_name[index]
+    - len() can be used to determine the number of characters in a string
+    - Strings can be iterated through using for loops
   
 * Strings can be thought of as lists
 
@@ -62,16 +65,21 @@
     
 * Strings and Conditionals
 
-    favorite_fruit = "blueberry"
-    counter = 0
-    for character in favorite_fruit:
-      if character == "b":
-        counter = counter + 1
-    print(counter)
-    
-    
+     - Can iterate through strings and do something to each character
+     - Can use 'in' checks to iterate more efficiently 
 
-
+        def letter_check(word, letter):
+          for character in word:
+            if character == letter:
+              return True
+          return False
+    
+        def common_letters(string_one, string_two):
+          common = []
+          for letter in string_one:
+            if (letter in string_two) and not (letter in common):
+              common.append(letter)
+          return common
 
 
    
