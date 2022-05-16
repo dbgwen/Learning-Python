@@ -81,14 +81,137 @@
               common.append(letter)
           return common
 
-## String Methods
+## String Methods - Changing Case
     
-    .lower() returns the string with all lowercase characters
-    .upper() returns the string with all uppercase characters
-    .title() returns the string in title case, which means the first letter of each word is capitalized
+ * Three methods to change the casing of strings (they create new strings and do not change original strings: 
+        .lower() returns the string with all lowercase characters
+        .upper() returns the string with all uppercase characters
+        .title() returns the string in title case, which means the first letter of each word is capitalized
     
-    
+    string_variable_name.lower()
 
-   
+## String Methods - Splitting Strings
+
+ * .split() is performed on a string, takes one argument, 
+                and returns a list of substrings found between the given argument (which in the case of .split() is known as the delimiter)
+                .split returns a list with each word in the string. Important to note: if we run .split() on a string with no spaces, 
+                  we will get the same string in return
+                  
+     - If we give split() an argument it will split the strings at that character, e.g., string_variable.split('a') will split the strings at the 
+            letter 'a'. When you split a string on a character that it also ends with, you’ll end up with an empty string at the end of the list
+            
+     - You can use any string as the argument for .split(), making it a versatile and powerful tool
+     
+        authors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+        author_names = authors.split(',')
+        print(author_names)
+
+        author_last_names = []
+        for name in author_names:
+          author_last_names.append(name.split()[-1])
+
+        print(author_last_names)
+     
+   * Split strings using escape sequences - used to indicate that we want to pslit something in a string that is not a character
+     
+         '/n' - newline
+         '/t' - horizontal tab
+     
+## String Methods - Joining Strings
+ 
+      - .join() is the opposite of .split() - .join() joins a list of strings together with a given delimiter 
+      
+        'delimiter'.join(list_you_want_to_join)
+        
+        reapers_line_one_words = ["Black", "reapers", "with", "the", "sound", "of", "steel", "on", "stones"]
+        reapers_line_one = ' '.join(reapers_line_one_words)
+        print(reapers_line_one)
+ 
+     - .join() can also use escape sequences to join strings
+        
+         '/n' - newline
+         '/t' - horizontal tab
+         
+        winter_trees_lines = ['All the complicated details', 'of the attiring and', 'the disattiring are completed!', 'A liquid moon', 'moves gently among', 'the long branches.', 'Thus having prepared their buds', 'against a sure winter', 'the wise trees', 'stand sleeping in the cold.']
+        winter_trees_full = '\n'.join(winter_trees_lines)
+        print(winter_trees_full)
+        
+## String Methods - Cleaning Strings
   
+    * .strip() - strips a string so it removes all the whitespace characters form the beingging to end
+   
+        - can also use .strip() with a character argument, which will strip that character from either end of the string
+        
+        love_maybe_lines = ['Always    ', '     in the middle of our bloodiest battles  ', 'you lay down your arms', '           like flowering mines    ','\n' ,'   to conquer me home.    ']
+        love_maybe_lines_stripped = []
+        for line in love_maybe_lines:
+          love_maybe_lines_stripped.append(line.strip())
+        print(love_maybe_lines_stripped)
+        
+        love_maybe_full = '\n'.join(love_maybe_lines_stripped)
+        print(love_maybe_full)
+    
+    * .replace() - takes two arguments and replaces all instances of the first argument in a string with the second argument
+    
+        string_name.replace(substring_being_replaced, new_substring)
+        
+        toomer_bio_fixed = toomer_bio.replace('Tomer', 'Toomer')
+        
+## String Methods - Finding Strings
+ 
+     .find() - takes a string as an argument and searching the string it was run on for that string
+                It then returns the first index value where that string is located
+                
+         god_wills_it_line_one = "The very earth will disown you"
+         disown_placement = god_wills_it_line_one.find('disown') - finds the index of the word
+         print(disown_placement)
+         
+ ## Strings Method - Format
+ 
+      .format() - takes variables as an argument and includes them in the string that it is run on
+                    You include {} marks as placeholders for where those variables will be imported
+                    
+           def favorite_song_statement(song, artist):
+            return "My favorite song is {} by {}.".format(song, artist)
+            
+       - Note: .format() can take as many arguments as there are {} in the string it is run on, which in this case is two
+       
+            def poem_title_card(title, poet):
+              poem_desc = "The poem \"{}\" is written by {}.".format(title, poet)
+              return poem_desc
+ 
+       - Can add keywords to the .format() - This makes writing AND reading the code much easier
+       
+            def favorite_song_statement(song, artist):
+                return "My favorite song is {song} by {artist}.".format(song=song, artist=artist)
+ 
+            def favorite_song_statement(song, artist):
+                # this will have the same output as the above example
+                return "My favorite song is {song} by {artist}.".format(artist=artist, song=song)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
