@@ -189,7 +189,7 @@
                 # this will have the same output as the above example
                 return "My favorite song is {song} by {artist}.".format(artist=artist, song=song)
  
- ## Example Code
+ ## Example Code 1
  
 highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, Dreamwood:Adrienne Rich:1987"
 print(highlighted_poems)
@@ -218,24 +218,86 @@ for poem in highlighted_poems_details:
 for poem in highlighted_poems_details:
   return "The poem {} was published by {} in {}.".format(title=title, poet=poet, date=date)
 
+
+## Example Code 2 
+
+ letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+
+    # Write your unique_english_letters function here:
+    def unique_english_letters(word):
+      unique = 0
+      for letter in letters:
+        if letter in word: 
+          unique +=1
+      return unique
+ 
+
+## Example Code 3 
+
+    def count_char_x(word,x):
+      common = 0
+      for letter in word:
+        if letter == x:
+          common += 1
+      return common
+ 
+ ## Example Code 4
+ 
+     def count_multi_char_x(word, x):
+      counts = word.split(x)
+      return(len(counts)-1)
  
  
+ ## Example Code 5
  
+     def substring_between_letters(word, start, end):
+      if word.find(start) == -1:
+        return word
+      if word.find(end) == -1:
+        return word
+      else:
+        return word[-3:-1]
  
+ ## Example Code 6
+
+     def x_length_words(sentence, x):
+      words = sentence.split(" ")
+      for word in words:
+        if len(word) < x:
+          return False
+      return True
+
+ ## Example Code 7
  
+    def check_for_name(sentence, name):
+      if name.lower() in sentence.lower():
+        return True
+      return False
+
+## Example Code 8 
+
+    def every_other_letter(word):
+      every_second = ""
+      for i in range(0, len(word), 2):
+        every_second += word[i]
+      return every_second
+
+ ## Example Code 9 
  
+     def reverse_string(word):
+      reverse = ""
+      for i in range(len(word)-1, -1, -1):
+        reverse += word[i]
+      return reverse 
  
+ ## Example Code 10
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+    def make_spoonerism(word1, word2):
+      spoon1 = word2[0] + word1[1:]
+      spoon2 = word1[0] + word2[1:]
+      spoon = spoon1 + " " + spoon2
+      return spoon
+
  
  
  
