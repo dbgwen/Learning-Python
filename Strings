@@ -299,8 +299,13 @@ for poem in highlighted_poems_details:
       return spoon
 
  
- 
- 
+## Example Code 11
+
+    def add_exclamation(word):
+      while(len(word) < 20):
+        word += "!"
+      return word
+
  
  
  
