@@ -1,0 +1,49 @@
+## Python Dictionaries
+
+  - A dictionary is an unordered set of key: value pairs
+  - A dictionary begins and ends with curly braces { and }
+  - Each item consists of a key (strings or numbers) and a value (strings or numbers)
+  - Each key: value pair is separated by a comma
+  - We can have a list or a dictionary as a value of an item in a dictionary, but we cannot use these data types as keys of the dictionary
+  - Dictionaries in Python rely on each key having a hash value, a specific identifier for the key
+  - If the key can change, that hash value would not be reliable - the keys must always be unchangeable, hashable data types, like numbers or strings
+ 
+* Create an Empty Dictionary
+ 
+  empty empty_dict = {} 
+  
+* Add a Key
+
+  dictionary[key] = value
+  
+* Add Multiple Keys
+
+  - to add multiple key : value pairs to a dictionary at once - use the .update() method
+  
+  dictionary.update({key: value, key: value})
+  
+* Overwrite Values
+
+  - The value assignment used when adding a key can also be used to overwrite a key
+  
+  dictionary[key] = value
+  
+* Dictionary Comprehensions
+
+  - Use .zip() to combine lists to make a dictionary
+  
+  dictionary = {key:value for key, value in zip(list1, list2)}
+
+    Remember that zip() combines two lists into an iterator of tuples with the list elements paired together:
+      1. Takes a pair from the iterator of tuples
+      2. Names the elements in the pair key (the one originally from the names list) and value (the one originally from the heights list)
+      3. Creates a key : value item in the students dictionary
+      4. Repeats steps 1-3 for the entire iterator of pairs
+
+
+  
+  
+  
+  
+  
+  
