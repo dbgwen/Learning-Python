@@ -49,6 +49,53 @@ Data File Formats
   Note: Proprietary formats include Excel or MS Access files that are designed to be opened by Microsoft Office applications, 
         as opposed to more generic types like .csv files
         
- 
- 
- 
+API Example 
+
+    The Census Data API provides a fast and simple way to access its data. To query the ACS 5-year data, a request should be made to:
+    https://api.census.gov/data/2020/acs/acs5 specifying the variables to fetch and the geographic level you want. 
+
+    For example, an API call requesting the total population count of commuters (B08303_001E) at the state level would look like this: 
+    https://api.census.gov/data/2020/acs/acs5?get=NAME,B08303_001E&for=state:*
+
+    The part of the URL after ? contains the query parameters, each parameter is separated by &.
+
+    The get parameter specifies a comma-separated list of variables we want to fetch
+        B08303_001E is the number of commuters
+        NAME is the name of the geographic level
+        
+    The for parameter specifies the geographic level
+        we are requesting state-level data
+        and we want all states, as indicated by the *
+        
+     https://api.census.gov/data/2020/acs/acs5?get=NAME,B08303_001E,B08303_013E&for=county:*&in=state:36 ## returns results for county and state
+     
+## In Python
+
+    import requests
+
+    r = requests.get('https://api.census.gov/data/2020/acs/acs5?get=NAME,B08303_001E,B08303_013E&for=county:*&in=state:36') 
+
+    r_text = r.text
+    print(r_text)
+    
+    r_json = r.json()
+    print(r.json())
+
+    ## While JSON is a great universal format for data interchange, it might not be the ideal format in other aspects, such as readability. 
+    ## Instead, having the data in a tabular format (like a CSV) can make it much more human-readable and accessible. 
+    
+    import csv
+    use the writerows() method from the csv library
+    
+    with open('census.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(r.json())
+    
+    1. First make a variable and call it file. 
+    2. Then we use open() to open a file, since we are going to write that file, we open it with mode='w' for writing mode. 
+    3. The newline='' ensures that newlines are always interpreted correctly.
+    4. Next, we use the writer() function from the csv library to make a writer object (don’t worry about what this is right now). 
+    5. We then use the writerows() method to write each row of data into comma-separated format.
+    
+    
+    
