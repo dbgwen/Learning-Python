@@ -1,0 +1,54 @@
+## Data acquisition (also called data mining) is the process of gathering data
+## Ideally, we have a question in mind before we collect the data, but not always
+## Sometimes data is gathered before we know what to do with it
+## When that happens, it is important to take a step back and define what questions can be answered with the available data
+
+In addition, some things to consider when acquiring data are:
+
+    1. What data is needed to achieve the goal?
+    2. How much data is needed?
+    3. Where and how can this data be found?
+    4. What legal and privacy concerns should be considered?
+    
+Primary Data
+
+   - Experiments (e.g., wet lab experiments like gene sequencing)
+   - Observations (e.g., surveys, sensors, in situ collection)
+   - Simulations (e.g., theoretical models like climate models)
+   - Scraping or compiling (e.g., webscraping, text mining)
+
+Secondary Data
+
+   - Any primary data that was collected by someone else
+   - Institutionalized data banks (e.g., census, gene sequences)
+   
+   Secondary data can be obtained from many different websites. Some of the most popular repositories include:
+
+    GitHub
+    Kaggle
+    KDnuggets
+    UCI Machine Learning Repository
+    US Government’s Open Data
+    Five Thirty Eight
+    Amazon Web Services
+        BuzzFeed
+        Data is Plural
+        Harvard HCI
+        
+    Application Programming Interface (API)
+    APIs are built around the HTTP request/response cycle. A client (you) sends a request for data to a website’s server through an API call 
+    Then, the server searches its database and responds either with the data, or an error stating that the request cannot be fulfilled
+
+Data File Formats
+
+   - Tabular (e.g., .csv, .tsv, .xlsx)
+   - Non-tabular (e.g., .txt, .rtf, .xml)
+   - Image (e.g., .png, .jpg, .tif)
+   - Agnostic (e.g., .dat)
+
+  Note: Proprietary formats include Excel or MS Access files that are designed to be opened by Microsoft Office applications, 
+        as opposed to more generic types like .csv files
+        
+ 
+ 
+ 
