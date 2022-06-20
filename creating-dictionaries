@@ -52,8 +52,11 @@
 * Check if Key Exists
 
   key_to_check = "Landmark 81"
+  
   if key_to_check in building_heights:
   print(building_heights["Landmark 81"])
+  
+  print("Landmark 81" in building_heights)
   
 * Try/Except to Get a Key
 
@@ -97,6 +100,10 @@
   print(student)
   
   variable = dictionary_name.keys()
+  
+  oscars = {"Best Picture": "Moonlight", "Best Actor": "Casey Affleck", "Best Actress": "Emma Stone", "Animated Feature": "Zootopia"}
+  for element in oscars:
+    print(element)
   
 * Get all Values
   
