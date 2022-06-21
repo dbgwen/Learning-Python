@@ -131,6 +131,14 @@
 
   
   
+## Examples
+
+  names = ["Marina", "Vinay", "Connie", "Isaac", "Valentina"]
+  ages =[27, 24, 43, 35, 52]
+  zipped_ages = zip(names, ages)
+  names_to_ages = {key: value for key, value in zipped_ages}
+  print(names_to_ages)
+  
   
   
   
