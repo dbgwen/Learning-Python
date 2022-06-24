@@ -86,7 +86,27 @@
       for item in big_list:
         output_writer.writerow(item)
  
+ * Reading JSON File
+ 
+    import json
+ 
+    with open('purchase_14781239.json') as purchase_json:
+      purchase_data = json.load(purchase_json)
+      
+    import json
+
+    with open('message.json') as message_json:
+      message = json.load(message_json)
+      print(message['text'])
      
-     
-     
+* Writing a JSON File
+
+    data_payload = [
+      {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+       'follow up': 'But enough talk!'}
+    ]
+
+    import json
+    with open('data.json', 'w') as data_json:
+      json.dump(data_payload, data_json)
      
